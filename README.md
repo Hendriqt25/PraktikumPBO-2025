@@ -6,12 +6,12 @@ Hendri Zaidan Safitra
 
 A'2024
 
-======================================================
+============================================================================================
 ## Penjelasan Singkat Program Sistem Transportasi Kereta
 
 Sistem Transportasi Kereta adalah program java yang dirancang untuk memesan dan mengelola tiket kereta para pengguna. Dengan adanya program ini memungkinkan pengguna dapat melihat, menambah, memperbaruhi dan menghapus tiket menjadi lebih terstruktur, lebih mudah digunakan dan efesien.
 
-======================================================
+============================================================================================
 ## Penjelasan Alur Program
 
 <img width="339" height="190" alt="image" src="https://github.com/user-attachments/assets/f2b456cb-7443-4530-b4f7-91bb9149e159" />
@@ -55,7 +55,7 @@ Jika Pengguna merasa cukup untuk menggunakan program ini, maka pengguna memilih 
 
 <img width="525" height="289" alt="image" src="https://github.com/user-attachments/assets/c1c994bd-4d15-47a0-864b-b918088b6f2f" />
 
-======================================================
+============================================================================================
 
 
 
