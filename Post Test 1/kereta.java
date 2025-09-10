@@ -40,7 +40,7 @@ public class kereta {
             System.out.println("5. Keluar");
             System.out.println("=======================================");
             
-            System.out.print("Pilih menu (1-6): ");
+            System.out.print("Pilih menu (1-5): ");
             pilihan = scanner.nextInt();
             scanner.nextLine();
        
@@ -195,3 +195,4 @@ public class kereta {
 }
 
     
+
