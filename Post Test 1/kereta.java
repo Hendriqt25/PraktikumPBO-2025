@@ -1,32 +1,42 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.praktium;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class kereta {
     
-    public String namaKereta, rute, waktuBerangkat, namaPenumpang, nomorHp;
-    public int nomorKereta, hargaKereta;
+    public String namaKereta, tujuan, waktuBerangkat, namaPenumpang, nomorHp;
+    public int nomorKereta, kapasitas, hargaKereta;
     
     static ArrayList<kereta> daftarPenumpang = new ArrayList<>();
+    static ArrayList<kereta> daftarKereta = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
        
+    public kereta(int nomorKereta, String namaKereta, String tujuan, String waktuBerangkat, int kapasitas, int hargaKereta){
+        this.nomorKereta = nomorKereta;
+        this.namaKereta = namaKereta;
+        this.tujuan = tujuan;
+        this.waktuBerangkat = waktuBerangkat;
+        this.kapasitas = kapasitas;
+        this.hargaKereta = hargaKereta;
+    }
     
-    public kereta(String namaPenumpang, int nomorKereta, String rute, String waktuBerangkat, String nomorHp, int hargaKereta){
+    public kereta(String namaPenumpang, int nomorKereta, String tujuan, String waktuBerangkat, String nomorHp, int hargaKereta){
         this.namaPenumpang = namaPenumpang;
         this.nomorKereta = nomorKereta;
-        this.rute = rute;
+        this.tujuan = tujuan;
         this.waktuBerangkat = waktuBerangkat;
         this.nomorHp = nomorHp;
         this.hargaKereta = hargaKereta;   
     }
     
     public static void main(String[] args){
-        daftarPenumpang.add(new kereta("Hafizh", 89, "Surabaya Gubeng", "08:00", "082211423123",  36000));
-        daftarPenumpang.add(new kereta("Rama", 93, " Malang", "18:00", "082131231313", 31000));
+        
+        daftarKereta.add(new kereta(101, "Argo Wilis", "Bandung", "07:00", 300, 250000));
+        daftarKereta.add(new kereta(102, "Taksaka", "Jakarta", "08:30", 350, 300000));
+        daftarKereta.add(new kereta(103, "Prameks", "Solo", "18:00", 400, 100000));
+        
+        daftarPenumpang.add(new kereta("Hafizh", 101, "Bandung", "07:00", "082211423123",  250000));
+        daftarPenumpang.add(new kereta("Rama", 103, " Solo", "18:00", "082131231313", 100000));
         
         int pilihan;
         do{
@@ -65,7 +75,20 @@ public class kereta {
             }
         } while (pilihan != 5);
     }
-
+    
+    public static void tampilanKereta(){
+        System.out.println("\n========  Stasiun Yogyakarta ========");   
+        System.out.println("\n==========  jadwal Kereta  ==========");
+        for(kereta krt : daftarKereta){
+            System.out.println("Nomor Kereta    : " + krt.nomorKereta);
+            System.out.println("Nama Kereta     : " + krt.namaKereta);
+            System.out.println("Tujuan          : " + krt.tujuan);
+            System.out.println("Waktu Berangkat : " + krt.waktuBerangkat);
+            System.out.println("Kapasitas       : " + krt.kapasitas);
+            System.out.println("Harga Kereta    : " + krt.hargaKereta);
+            System.out.println("==================================");
+        }
+    }
     public static void tampilanPenumpang(){
         System.out.println("\n========  Stasiun Yogyakarta ========");   
         System.out.println("\n===========   Tiket  ==========");
@@ -77,7 +100,7 @@ public class kereta {
                  System.out.println("Nomor Tiket    : " + index);
                  System.out.println("Nama Penumpang : " + png.namaPenumpang);
                  System.out.println("Nomor Kereta   : " + png.nomorKereta);
-                 System.out.println("Rute           : " + png.rute);
+                 System.out.println("Tujuan         : " + png.tujuan);
                  System.out.println("Waktu Berangkat: " + png.waktuBerangkat);
                  System.out.println("Nomor Handphone: " + png.nomorHp);
                  System.out.println("Harga Kereta   : " + png.hargaKereta);
@@ -87,7 +110,7 @@ public class kereta {
         }
     }
     public static void tambahTiket() {
-        System.out.println("\n========  Stasiun Yogyakarta ========");
+        tampilanKereta();
         System.out.println("\n========   Tambahan Tiket   ==========");
         System.out.print("Masukkan nama penumpang: ");
         String namaPenumpang = scanner.nextLine();
@@ -96,8 +119,8 @@ public class kereta {
         int nomorKereta = scanner.nextInt();
         
         scanner.nextLine();
-        System.out.print("Masukan Tujuan Rute Kereta: ");
-        String rute = scanner.nextLine();
+        System.out.print("Masukan Tujuan Kereta: ");
+        String tujuan = scanner.nextLine();
 
         
         System.out.print("Masukan Waktu Berangkat (HH:MM): ");
@@ -109,11 +132,11 @@ public class kereta {
         System.out.print("Harga Kereta: ");
         int harga = scanner.nextInt();
 
-        kereta pesan = new kereta(namaPenumpang, nomorKereta, rute, waktu, nomorHp, harga);
+        kereta pesan = new kereta(namaPenumpang, nomorKereta, tujuan, waktu, nomorHp, harga);
 
         daftarPenumpang.add(pesan);
         
-        System.out.println("Data kereta berhasil ditambahkan!");
+        System.out.println("Pesan Kereta berhasil ditambahkan yeyy masborrr!");
     }
     
     public static void updateTiket(){  
@@ -142,10 +165,10 @@ public class kereta {
                 baru.nomorKereta = Integer.parseInt(inputNomor);
             }
 
-            System.out.print("Rute Baru           : ");
-            String inputRute = scanner.nextLine();
-            if (!inputRute.isEmpty()) {
-                baru.rute = inputRute;
+            System.out.print("Tujuan Baru: ");
+            String inputTujuan = scanner.nextLine();
+            if (!inputTujuan.isEmpty()) {
+                baru.tujuan = inputTujuan;
             }
 
             System.out.print("Waktu Berangkat Baru: ");
@@ -193,6 +216,8 @@ public class kereta {
                 }
     }      
 }
+    
 
     
+
 
