@@ -20,7 +20,7 @@ Saat pertama kali program dijalankan, pengguna diminta memilih pada menu yang te
 
 <img width="372" height="571" alt="image" src="https://github.com/user-attachments/assets/5c4403e8-8049-4559-9847-92c50aecf994" />
 
-Jika pengguna memilih "2" maka pengguna masuk ke menu "Tambah Tiket" maka daftar kereta yang tersedia akan tampil sebelum user memesan tiket/ menambahkan tiket, bisa diliat ada 3 daftar kereta yang tersedia. Selanjutnya pengguna memilih yang mana kereta yang tujuan nya sama dengan pengguna, setelah memilih pengguna di minta untuk isi nama, nomor kereta yang ingin dipesan, tujuan keretanya, waktu, nomor handphone dan harga tiket keretanya dan pesan tiket atas nama "samsul" terlah berhasil ditambahkan dan tiket tersebut masuk kedalam list informasi tiket.
+Jika pengguna memilih "1" maka pengguna masuk ke menu "Tambah Tiket" maka daftar kereta yang tersedia akan tampil sebelum user memesan tiket/ menambahkan tiket, bisa diliat ada 3 daftar kereta yang tersedia. Selanjutnya pengguna memilih yang mana kereta yang tujuan nya sama dengan pengguna, setelah memilih pengguna di minta untuk isi nama, nomor kereta yang ingin dipesan, tujuan keretanya, waktu, nomor handphone dan harga tiket keretanya dan pesan tiket atas nama "samsul" terlah berhasil ditambahkan dan tiket tersebut masuk kedalam list informasi tiket.
 
 <img width="337" height="609" alt="image" src="https://github.com/user-attachments/assets/96606df2-5b30-4766-a110-0d6508eb5e50" />
 
