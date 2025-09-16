@@ -29,7 +29,7 @@ Sistem Transportasi Kereta adalah program java yang dirancang untuk memesan dan 
    c). Service berisi class yang mengatur logika program atau bisa dibilang jembatan antara model
    dan main karena bisa mengatur mekanisme logika terkait class tiket di package service. Oleh      karena itu package main dan service sesuai dengan MVC (Model-view-controller) yaitu              controller karena mengatur mekanisme logika dan alur utama suatu program.
 
-   d). View berisi class output pada daftar kereta dan daftar penumpang sesuai dengan MVC           (Model - view - controller).
+   d). View berisi class yang mengatur ui atau tampilan dalam program sesuai dengan MVC           (Model - view - controller).
 
 2. Alur Program
    
